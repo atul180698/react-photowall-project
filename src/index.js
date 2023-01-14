@@ -1,17 +1,32 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React, {Component} from "react";
+import Main from "./Components/Main";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+//old import method
+//import ReactDOM from "react-dom";
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+//New import method in React 18
+import ReactDOM from "react-dom/client";
+
+//const tasks= ["one","two","three"]
+
+// const element = 
+// <div>
+//   <h1>Integers</h1>
+//   <ul>
+//     {tasks.map((task,index) => <li key={index}> {task}</li> )}
+//   </ul>
+// </div>
+
+
+
+
+
+
+
+// const element = React.createElement("ul",null,tasks.map((task, index) => React.createElement("li",{key: index},task) ));
+
+//old method to render using ReactDOM.render :
+//ReactDOM.render(element,document.getElementById("root"))
+
+//New updated method to render using createRoot in React 18 :
+ReactDOM.createRoot(document.getElementById("root")).render(<Main/>);
